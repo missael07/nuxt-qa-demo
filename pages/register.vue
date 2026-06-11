@@ -1,5 +1,4 @@
-<script setup lang="ts">
-import { navigateTo } from 'nuxt/app'
+<script setup>
 import { ref } from 'vue'
 
 const email = ref('')
@@ -34,9 +33,10 @@ async function register() {
 
   localStorage.setItem('qa_user_email', email.value)
   localStorage.setItem('qa_user_password', password.value)
+
   success.value = 'Account created successfully.'
 
-  setTimeout(() => navigateTo('/login'), 600)
+  await navigateTo('/login')
 }
 </script>
 
