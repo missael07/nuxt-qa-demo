@@ -1,0 +1,22 @@
+name: Trigger QA Agent
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  trigger-qa:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Wait for Netlify deploy
+        run: sleep 90
+
+      - name: Trigger QA Agent
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.QA_AGENT_TOKEN }}" \
+            https://api.github.com/repos/missael07/qa-agent/dispatches \
+            -d '{"event_type":"run-qa"}'
