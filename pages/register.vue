@@ -50,7 +50,7 @@ async function register() {
     <form data-testid="register-form" @submit.prevent="register">
       <div class="form-group">
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" v-model="email" />
+        <input id="email" name="email" v-model="email" />
       </div>
 
       <div class="form-group">
