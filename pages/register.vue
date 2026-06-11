@@ -36,7 +36,6 @@ async function register() {
 
   success.value = 'Account created successfully.'
 
-  console.log('Registered user:', email.value)
   await navigateTo('/login')
 }
 </script>
