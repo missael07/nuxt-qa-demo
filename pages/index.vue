@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <h1>Nuxt QA Demo</h1>
+    <h1>Nuxt QA Demo Automatically Deployed</h1>
     <p>Proyecto demo para probar register, login y dashboard con Playwright.</p>
     <div class="nav">
       <NuxtLink to="/register">Register</NuxtLink>
